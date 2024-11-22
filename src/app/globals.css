@@ -1,42 +1,52 @@
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+* {
+  margin: 0px;
+  padding: 0px;
 }
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+body {
+  background-image: url("https://img.freepik.com/free-vector/dark-black-background-design-with-stripes_1017-38064.jpg?semt=ais_hybrid.jpg");
+  color: #dc5f00;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  font-family: "Times New Roman", Times, serif;
+}
+@keyframes rotate-icon {
+  0% {
+    transform: rotate(10deg) translateX(0);
+  }
+  50% {
+    transform: rotate(-30deg) translateX(-20px);
+  }
+  100% {
+    transform: rotate(0deg) translateX(0);
   }
 }
 
-html,
-body {
-  max-width: 100vw;
-  overflow-x: hidden;
+.fixed-like-icon {
+  position: fixed;
+  bottom: 70px;
+  right: 40px;
+  background-color: rgb(61, 79, 239);
+  border: 4px solid;
+  color: #eeeeee; /* Light gray */
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 50%;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 30; /* Ensure it appears above other elements */
+  animation: rotate-icon 2s infinite; /* Apply the rotate animation */
+  transition: transform 0.3s ease;
 }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+.fixed-like-icon:hover {
+  transform: scale(1.1); /* Slightly increase size on hover */
+  background: transparent; 
+  color:rgb(61, 79, 239);
+  border: none;/* Light blue on hover */
 }
-
-* {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
-}
-
-a {
-  color: inherit;
-  text-decoration: none;
-}
-
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
+@media screen and (min-width: 100px) and (max-width: 750px) {
+  .fixed-like-icon {
+    background: none;
+    border: none;
   }
 }
