@@ -16,11 +16,11 @@ function About() {
         {/* leftside */}
         <div>
           <Image
-            src={"/images/about-image.jpg"}
+            src={"/Images/about-image.jpg"}
             width={200}
             height={200}
             className="about-image"
-            alt="profilePic"
+            alt="about-image"
           />
         </div>
         {/* rightSide */}
